@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a958c1bc-bb53-421d-8e6e-37f78cc5fbbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/churn_project_deployment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Churn Prediction-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Churn Prediction-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Churn Prediction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Churn Prediction.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/churn_project_deployment.py" beforeDir="false" afterPath="$PROJECT_DIR$/churn_project_deployment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradient_boosting_model" beforeDir="false" afterPath="$PROJECT_DIR$/gradient_boosting_model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kmeans_model" beforeDir="false" afterPath="$PROJECT_DIR$/kmeans_model" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

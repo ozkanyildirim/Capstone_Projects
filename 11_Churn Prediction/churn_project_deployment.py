@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
 
 st.sidebar.title('Employee Information')
 
@@ -46,13 +47,21 @@ columns = ['satisfaction_level', 'last_evaluation', 'number_project', 'average_m
 df_coll = pd.DataFrame.from_dict([coll_dict])
 X = pd.get_dummies(df_coll,drop_first=True).reindex(columns=columns, fill_value=0)
 
-prediction = model.predict(X)
+
+scalerfile = 'scaler.sav'
+scaler = pickle.load(open(scalerfile, 'rb'))
+
+X_transformed = scaler.transform(X)
+
+prediction = model.predict(X_transformed)
 
 st.header('Employee Information')
 st.table(df_coll)
 st.subheader('Click PREDICT if configuration is OK')
 if st.button('PREDICT'):
-	if prediction[0]==1:
+	if prediction[0]==0:
+		st.success(prediction[0])
 		st.success(f'Employee will STAY :)')
-	elif prediction[0]==0:
-		st.success(f'Employee will CHURN :(')
+	elif prediction[0]==1:
+		st.warning(prediction[0])
+		st.warning(f'Employee will CHURN :(')
